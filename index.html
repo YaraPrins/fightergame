@@ -1,0 +1,69 @@
+<!-- Versie 1.6 Yara Prins, Eindproduct Inleiding Programmeren
+    Communication & Multimedia Design, Jaar 1 (Hogeschool van Amsterdam)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara Prins Eindoplevering IP</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+    <img src="./img/hero.png" alt="held">
+    <img src="./img/monster.png" alt="monster">
+    <!-- De P's worden uiteindelijk vervangen met een afbeelding van de uitkomst van de Math.random in mijn JS (om
+    te laten zien of een aanval heeft geraakt of niet, en hoeveel damage of healing erbij komt) -->
+    <p class="d20Held"></p>
+    <p class="d10Held"></p>
+    <p class="d20Monster"></p>
+    <p class="d10Monster"></p>
+
+    
+    <div class="youWon">
+        <h1>You Won!</h1>
+        <h2>Play Again?</h2>
+        <button class="wonPlayAgain">Play Again</button>
+    </div>
+    
+    
+    <div class="youLost">
+        <h1>You Lost</h1>
+        <h2>Try Again?</h2>
+        <button class="lostPlayAgain">Play Again</button>
+    </div>
+
+    <img src="" alt="" class="rolled20Held">
+    <img src="" alt="" class="rolled20Monster">
+    <img src="" alt="" class="rolled10Held">
+    <img src="" alt="" class="rolled10Monster">
+    <img src="" alt="" class="critical10Held">
+    <img src="" alt="" class="critical10Monster">
+    <div class="knoppenHeld">
+        <button id="attackHeld">Attack</button>
+        <button id="healHeld">Heal</button>
+    </div>
+    <!-- Ik heb gebruik gemaakt van een progressbar in plaats van DIVjes om de levensbalken van de Held en het Monster weer te geven.
+    Dit heb ik veranderd aan de hand van de feedback van vorige keer. -->
+    <progress id="hpHeld" max="50" value="50"></progress>
+    <progress id="hpMonster" max="50" value="50"></progress>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+<!-- BRONNEN -->
+<!-- Afb Held: https://feheroes.fandom.com/wiki/Lyn:_Brave_Lady 
+     Afb Monster: https://death-saves.com/products/beholder-patch 
+     Afb Achtergrond: https://www.dungeonsolvers.com/2019/01/11/using-fronts-from-pbta-in-dnd-5e/
+     Afb Dobbelstenen: Yara Prins -->
+
+<!-- progress tag
+     https://www.w3docs.com/learn-html/html-progress-tag.html 
+     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress
+     https://css-tricks.com/html5-progress-element/
+     https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-progress-bar -->

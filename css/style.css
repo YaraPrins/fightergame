@@ -1,0 +1,178 @@
+/* Algemeen */
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("../img/background-Dungeon.jpg");
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    background-position-y: 10px;
+    background-position-x: 50px;
+    background-color: #000;
+}
+
+img, #hpMonster, #hpHeld, .knoppenHeld, p {
+    position: fixed;
+    z-index: 1;
+}
+
+h1, h2 {
+    color: white;
+    font-family: "Montserrat";
+    z-index: 3
+}
+
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    left: 1100px;
+}
+
+img {
+    max-width: 170px;
+    color: white;
+}
+
+button {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+/* You Won - You Lost */
+
+.youLost, .youWon {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(20, 20, 20, 0.8);
+    visibility: hidden;
+    z-index: 2;
+}
+.youLost h1, .youWon h1{
+    font-size: 6rem;
+    position: fixed;
+    top: 250px;
+    left: 600px;
+}
+.youLost h2, .youWon h2 {
+    font-size: 2rem;
+    position: fixed;
+    top: 380px;
+    left: 730px;
+    font-weight: 100;
+}
+.youWon button, .youLost button {
+    position: fixed;
+    top: 500px;
+    left: 735px;
+    width: 150px;
+    height: 50px;
+    z-index: 3;
+}
+
+/* tekst Monster en Held gerold */
+p.d20Held {
+    top: 60px;
+}
+p.d10Held {
+    top: 110px;
+}
+p.d20Monster {
+    top: 280px;
+}
+p.d10Monster {
+    top: 330px;
+}
+
+/* afbeeldingen monster en held */
+img:nth-child(1) {
+    top: 300px;
+    left: 220px;
+}
+img:nth-child(2) {
+    top: 60px;
+    left: 550px;
+}
+
+/* afbeeldingen dobbelstenen */
+.rolled20Held, .rolled10Held, .rolled20Monster, .rolled10Monster, .critical10Held, .critical10Monster {
+    max-width: 120px;
+}
+img.rolled20Held {
+    top: 655px;
+    left: 350px;
+}
+
+img.rolled10Held {
+    top: 670px;
+    left: 490px;
+}
+
+img.rolled20Monster {
+    top: 90px;
+    left: 760px;
+}
+
+img.rolled10Monster {
+    top: 130px;
+    left: 880px;
+}
+img.critical10Held {
+    top: 705px;
+    left: 570px;
+}
+img.critical10Monster {
+    top: 200px;
+    left: 935px;
+}
+
+/* Attack, Dodge, Heal */
+.knoppenHeld {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 10rem;
+    width: 10rem;
+    top: 640px;
+    left: 100px;
+}
+
+
+/* Health Bar
+
+Ik maak gebruik van -webkit- 
+omdat de normale css styling niet werkt op de progress bar,
+maar na wat onderzoek gedaan te hebben kwam ik hier op uit. */
+
+progress {
+   -webkit-appearance: none;
+}
+::-webkit-progress-bar {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+::-webkit-progress-value {
+    border-radius: 10px;
+}
+
+#hpMonster {
+    top: 230px;
+    left: 555px;
+}
+
+#hpHeld {
+    top: 510px;
+    left: 220px;
+}
